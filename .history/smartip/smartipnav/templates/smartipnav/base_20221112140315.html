@@ -68,27 +68,26 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link {% block indexactive %} {% endblock %}" aria-current="page" href="{% url 'Inicio' %}">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="index">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% block ipactive %} {% endblock %}" aria-current="page" href=" {% url 'Ip' %}">IP registrdos</a>
+            <a class="nav-link active" aria-current="page" href="ip">IP registrdos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% block computeractive %} {% endblock %}" aria-current="page" href="{% url 'Computers' %}">Computadoras</a>
+            <a class="nav-link active" aria-current="page" href="computer">Computadoras</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% block printersactive %} {% endblock %}" aria-current="page" href="{% url 'Printers' %}">Impresoras</a>
+            <a class="nav-link active" aria-current="page" href="printers">Impresoras</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% block officesactive %} {% endblock %}" aria-current="page" href="{% url 'Offices' %}">Oficinas</a>
+            <a class="nav-link active" aria-current="page" href="offices">Oficinas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% block usersactive %} {% endblock %}" aria-current="page" href="{% url 'Users' %}">Sistema</a>
+            <a class="nav-link active" aria-current="page" href="users">Sistema</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% block userspcactive %} {% endblock %}" aria-current="page" href="{% url 'UsersPc' %}">Usuarios</a>
+            <a class="nav-link active" aria-current="page" href="userspc">Usuarios</a>
           </li>
-
           <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
@@ -124,8 +123,8 @@
     Footer
   ============================-->
   <footer id="footer" class="section-bg">
-    <div class="footer-top bg-dark">
-      <div class="container bg-dark">
+    <div class="footer-top">
+      <div class="container">
 
         <div class="row">
 
@@ -137,12 +136,12 @@
 
                   <div class="footer-info">
                     <h3 class="text-info">Smart Ip</h3>
-                    <p class="text-light">Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+                    <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
                   </div>
 
                   <div class="footer-newsletter">
-                    <h4 class="text-info">Our Newsletter</h4>
-                    <p class="text-light">Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem.</p>
+                    <h4>Our Newsletter</h4>
+                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem.</p>
                     <form action="" method="post">
                       <input type="email" name="email"><input type="submit"  value="Subscribe">
                     </form>
@@ -152,19 +151,19 @@
 
                 <div class="col-sm-6">
                   <div class="footer-links">
-                    <h4 class="text-info">Useful Links</h4>
+                    <h4>Useful Links</h4>
                     <ul>
-                      <li><a class="text-light" href="#">Home</a></li>
-                      <li><a class="text-light" href="#">About us</a></li>
-                      <li><a class="text-light" href="#">Services</a></li>
-                      <li><a class="text-light" href="#">Terms of service</a></li>
-                      <li><a class="text-light" href="#">Privacy policy</a></li>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">About us</a></li>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">Terms of service</a></li>
+                      <li><a href="#">Privacy policy</a></li>
                     </ul>
                   </div>
 
                   <div class="footer-links">
-                    <h4 class="text-info">Contact Us</h4>
-                    <p class="text-light">
+                    <h4>Contact Us</h4>
+                    <p>
                       A108 Adam Street <br>
                       New York, NY 535022<br>
                       United States <br>
@@ -190,8 +189,8 @@
 
             <div class="form">
               
-              <h4 class="text-info">Send us a message</h4>
-              <p class= "text-light">Eos ipsa est voluptates. Nostrum nam libero ipsa vero. Debitis quasi sit eaque numquam similique commodi harum aut temporibus.</p>
+              <h4>Send us a message</h4>
+              <p>Eos ipsa est voluptates. Nostrum nam libero ipsa vero. Debitis quasi sit eaque numquam similique commodi harum aut temporibus.</p>
               <form action="" method="post" role="form" class="contactForm">
                 <div class="form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -228,7 +227,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Alejandro Jesúds Serrano</strong>. All Rights Reserved
+        &copy; Copyright <strong>Rapid</strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!--
@@ -237,7 +236,7 @@
           Licensing information: https://bootstrapmade.com/license/
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Rapid
         -->
-        Designed by <a href="https://AJS.com/">AJS</a>
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
   </footer><!-- #footer -->
