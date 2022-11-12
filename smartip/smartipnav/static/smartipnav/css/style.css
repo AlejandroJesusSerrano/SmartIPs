@@ -274,6 +274,10 @@ h6 {
   float: left;
 }
 
+.bg-color{
+  background-color: #065e77;
+}
+
 .main-nav a {
   display: block;
   position: relative;
