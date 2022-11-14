@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from smartipnav.models import Ip
 
 # Create your.htmls here.
 
@@ -23,10 +24,19 @@ def computers_list(request):
 def ip(request):
     return render(request, "smartipnav/ip.html")
 def ip_form(request):
+    
+    if request.method == "POST":
+        ip_direction = request.POST["ipdir"]
+                
+        ip = Ip(ipdir=ip_direction)
+        ip.save()
+
     return render(request, "smartipnav/ip_form.html")
+
 def ips_list(request):
     return render(request, "smartipnav/ips_list.html")
     
+
 def userspc(request):
     return render(request, "smartipnav/userspc.html")
 def userspc_form(request):
@@ -47,3 +57,4 @@ def user_form(request):
     return render(request, "smartipnav/user_form.html")
 def users_list(request):
     return render(request, "smartipnav/users_list.html")
+
