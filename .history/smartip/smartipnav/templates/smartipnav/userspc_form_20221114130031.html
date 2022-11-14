@@ -1,0 +1,38 @@
+{% extends 'smartipnav/base.html' %}
+
+
+{% block content %}
+<section>
+    <div class="container col-lg-6 bg-light rounded">
+        <div class="card mx-auto mt-5 bg-dark style="width: 20rem;">
+            <div class="card-header bg-dark text-info mx-auto">
+              Agregar Administrador
+            </div>
+            <form id=printer_add_form action="" method="post" class="mt-5">
+                {% csrf_token %}
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="user_name">Nombre: </label>
+                    <input class="form-control" type="text" name="user_name" id="user_name">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="user_lastname">Apellido: </label>
+                        <input class="form-control" type="text" name="user_lastname" id="user_lastname">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="pc_username">Nombre de Usuario Pc: </label>
+                        <input class="form-control" type="text" name="pc_username" id="pc_username">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="pc_name">Nombre Pc: </label>
+                        <input class="form-control" type="password" name="pc_name" id="pc_name">
+                    </li>
+                    <li class="list-group-item bg-dark px-auto">
+                        <button type="submit" class="btn btn-info row mx-auto w-100">Enviar</button>
+                    </li>
+                  </ul>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

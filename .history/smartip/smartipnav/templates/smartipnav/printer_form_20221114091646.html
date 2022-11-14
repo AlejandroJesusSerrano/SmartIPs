@@ -1,0 +1,81 @@
+{% extends 'smartipnav/base.html' %}
+
+{% block content %}
+<section>
+    <div class="container col-lg-6 bg-dark rounded">
+        <div class="card mx-auto mt-5 bg-dark style="width: 20rem;">
+            <div class="card-header bg-dark text-info mx-auto">
+              Agregar Nueva Impresora
+            </div>
+            <form id=printer_add_form action="" method="post" class="mt-5">
+                {% csrf_token %}
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="printer_image">Url Imágen: </label>
+                    <input class="form-control" type="url" name="printer_image" id="printer_add">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="printer_brand">Marca: </label>
+                        <input class="form-control" type="text" name="printer_brand" id="printer_brand">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="printer_model">Modelo: </label>
+                        <input class="form-control" type="text" name="printer_model" id="printer_model">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <select class="form-select">
+                            <option selected>NO</option>
+                            <option value="1">SI</option>
+                        </select>
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="printer_ip">Ip asignado: </label>
+                        <input class="form-control" type="text" name="printer_ip" id="printer_ip">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="printer_office">Oficina: </label>
+                        <input class="form-control" type="text" namr="printer_office" id="printer_office">
+                    </li>
+                    <li class="list-group-item bg-dark  px-auto mx-auto">
+                        <button type="submit" class="btn btn-info mx-auto w-75">Enviar</button>
+                    </li>
+                  </ul>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- <section id="intro" class="clearfix">
+    <div class="container d-flex h-100">
+        <div class="row justify-content-center align-self-center">
+            <div class="col-md-6 intro-info order-md-first order-last">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="container mx-auto w-100">
+                        <div class="form-group bg-dark mx-auto w-80">
+                            <label class="form-control-label text-light" for="printer_image">Url Imágen: </label>
+                            <input class="form-control" type="url" name="printer_image" id="printer_add"></p>
+                            
+                            <label class="form-control-label text-light" for="printer_brand">Marca: </label>
+                            <input class="form-control" type="text" name="printer_brand" id="printer_brand"></p>
+                        
+                            <label class="form-control-label text-light" for="printer_model">Modelo: </label>
+                            <input class="form-control" type="text" name="printer_model" id="printer_model"></p>
+                        
+                            <label class="form-control-label text-light" for="printer_rebuilded">Reacondicionada: </label>
+                            <input class="form-control" type="checkbox" name="printer_rebuilded" id="printer_rebuilded"></p>
+                        
+                            <label class="form-control-label text-light" for="printer_ip">Ip asignado: </label>
+                            <input class="form-control" type="text" name="printer_ip" id="printer_ip"></p>
+
+                            <label class="form-control-label text-light" for="printer_office">Oficina: </label>
+                            <input class="form-control" type="text" namr="printer_office" id="printer_office"></p>
+                        
+                            <button type="submit" class="btn btn-info mx-auto">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section> -->
+{% endblock %}

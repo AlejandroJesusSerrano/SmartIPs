@@ -1,0 +1,51 @@
+{% extends 'smartipnav/base.html' %}
+
+{% block content %}
+<section>
+    <div class="container col-lg-6 bg-light rounded">
+        <div class="card mx-auto mt-5 bg-dark style="width: 20rem;">
+            <div class="card-header bg-dark text-info mx-auto">
+              Agregar Nueva Computadora
+            </div>
+            <form id=printer_add_form action="" method="post" class="mt-5">
+                {% csrf_token %}
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="printer_image">Url Imágen: </label>
+                        <input class="form-control" type="url" name="printer_image" id="printer_image">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="printer_brand">Marca: </label>
+                        <input class="form-control" type="text" name="printer_brand" id="printer_brand">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="printer_model">Modelo: </label>
+                        <input class="form-control" type="text" name="printer_model" id="printer_model">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-check-label text-light" for="flexRadioDefault1">
+                            Servicio Técnico:
+                        </label>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="printer_ip">Ip asignado: </label>
+                        <input class="form-control" type="text" name="printer_ip" id="printer_ip">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="cumputer_user">Usuario: </label>
+                        <input class="form-control" type="text" namr="cumputer_user" id="cumputer_user">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="cumputer_office">Usuario: </label>
+                        <input class="form-control" type="text" namr="cumputer_office" id="cumputer_office">
+                    </li>
+                    <li class="list-group-item bg-dark px-auto">
+                        <button type="submit" class="btn btn-info row mx-auto w-100">Enviar</button>
+                    </li>
+                  </ul>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

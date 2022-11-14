@@ -1,0 +1,74 @@
+{% extends 'smartipnav/base.html' %}
+
+{% block computeractive %}
+    text-light
+{% endblock %}
+
+{% block content %}
+<section>
+    <div class="container col-lg-6 bg-light rounded">
+        <div class="card mx-auto mt-5 bg-dark style="width: 20rem;">
+            <div class="card-header bg-dark text-info mx-auto">
+              Agregar Nueva Computadora
+            </div>
+            <form id=computer_add_form action="" method="post" class="mt-5">
+                {% csrf_token %}
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="computer_image">Url Imágen: </label>
+                        <input class="form-control" type="url" name="computer_image" id="computer_image">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="computer_brand">Marca: </label>
+                        <input class="form-control" type="text" name="computer_brand" id="computer_brand">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="computer_model">Modelo: </label>
+                        <input class="form-control" type="text" name="computer_model" id="computer_model">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <div class="form-check">
+                            <label class="form-check-label text-light" for="flexCheckReac">
+                                Reacondicionada
+                            </label>
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckReac">
+                            
+                        </div>
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <div class="form-check">
+                            <label class="form-check-label text-light" for="flexCheckCheck">
+                                Usa Checkpoint 
+                            </label>
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckCheck">
+                        </div>
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <div class="form-check">
+                            <label class="form-check-label text-light" for="flexCheckInternet">
+                                Acceso a Internet
+                            </label>
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckInternet">
+                        </div>
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="computer_ip">Ip asignado: </label>
+                        <input class="form-control" type="text" name="computer_ip" id="computer_ip">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="cumputer_user">Usuario Pc: </label>
+                        <input class="form-control" type="text" namr="cumputer_user" id="cumputer_user">
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="cumputer_office">Oficina: </label>
+                        <input class="form-control" type="text" namr="cumputer_office" id="cumputer_office">
+                    </li>
+                    <li class="list-group-item bg-dark px-auto">
+                        <button type="submit" class="btn btn-info row mx-auto w-100">Enviar</button>
+                    </li>
+                  </ul>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

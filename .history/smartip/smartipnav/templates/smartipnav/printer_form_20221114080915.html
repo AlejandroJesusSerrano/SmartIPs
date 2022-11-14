@@ -1,0 +1,37 @@
+{% extends 'smartipnav/base.html' %}
+
+{% block content %}
+<section id="intro" class="clearfix">
+    <div class="container d-flex h-100">
+        <div class="row justify-content-center align-self-center">
+            <div class="col-md-6 intro-info order-md-first order-last">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="div container mx-auto">
+                        <div class="form-group bg-dark mx-auto">
+                            <label for="printer_image">Url Imágen: </label>
+                            <input type="url" name="printer_image" id="printer_add"></p>
+                            
+                            <label for="printer_brand">Marca: </label>
+                            <input type="text" name="printer_brand" id="printer_brand"></p>
+                        
+                            <label for="printer_model">Modelo: </label>
+                            <input type="text" name="printer_model" id="printer_model"></p>
+                        
+                            <label for="printer_rebuilded">Reacondicionada: </label>
+                            <input type="checkbox" name="printer_rebuilded" id="printer_rebuilded"></p>
+                        
+                            <label for="printer_ip">Ip asignado: </label>
+                            <p>Ip asignado: <input type="text" name="printer_ip" id="printer_ip"></p>
+
+                            <label for="printer_office">Oficina: </label>
+                            <input type="text" namr="printer_office" id="printer_office"></p>
+                        
+                            <button type="submit" class="btn btn-info">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
