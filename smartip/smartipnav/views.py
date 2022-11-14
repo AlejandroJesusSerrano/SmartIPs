@@ -8,6 +8,9 @@ def index(request):
 def printers(request):
     return render(request, "smartipnav/printers.html")
 
+def printer_form(request):
+    return render(request, "smartipnav/printer_form.html")
+
 def computer(request):
     return render(request, "smartipnav/computer.html")
     

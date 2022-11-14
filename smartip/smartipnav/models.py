@@ -23,6 +23,7 @@ class Computer(models.Model):
         model = models.CharField(max_length=10)
         brand = models.CharField(max_length=15)
         rebuilded = models.BooleanField(default=False)
+        double_conn = models.BooleanField(default=False)
         ip = models.ForeignKey(Ip, on_delete=models.CASCADE)
         reg_user = models.ForeignKey(Userspc, on_delete=models.CASCADE)
         Office = models.ForeignKey(Office, on_delete=models.CASCADE)
