@@ -12,17 +12,16 @@
             <div class="card-header bg-dark text-info mx-auto">
                 <p class="fs-2 my-0">Agregar Usuario Pc</p>
             </div>
-            <form id=printer_add_form action="" method="post" class="mt-2 text-light">
+            <form id=printer_add_form action="" method="post" class="mt-2">
                 {% csrf_token %}
                 <div class="container bg-dark px-2">
                 
                     {{ form.as_p }} 
-                    <button type="submit" class="btn btn-info row my-2 mx-auto w-100">Enviar</button>
+                    <button type="submit" class="btn btn-info row mx-auto w-100">Enviar</button>
                 
                 </div>
             </form>
         </div>
     </div>
 </section> 
-
 {% endblock %}

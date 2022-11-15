@@ -65,7 +65,6 @@ def userspc_form(request):
     form = UsersPcForm()
     return render(request, "smartipnav/userspc_form.html", {"form":form})
 
-#All USER´S PC LIST
 def userspc_list(request):
     pc_users = Userspc.objects.all()
     return render(request, "smartipnav/userspc_list.html", {"pc_users":pc_users})

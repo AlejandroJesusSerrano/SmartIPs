@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from smartipnav.models import *
-from smartipnav.forms import UsersPcForm
+from smartipnav.models import Ip
 
 # Create your.htmls here.
 
@@ -35,42 +34,15 @@ def ip_form(request):
     return render(request, "smartipnav/ip_form.html")
 
 def ips_list(request):
-    return render(request, "smartipnav/ips_list.html")   
-
-
-
-def userpc(request):
-    return render(request, "smartipnav/userpc.html")
-
-def userpc_result(request):
+    return render(request, "smartipnav/ips_list.html")
     
-    userpc_name = request.GET["name_userpc"]
-    userpc_searched = Userspc.objects.filter(name__icontains=userpc_name)
-    
-    return render(request, "smartipnav/userpc_search_result.html", {"userpc_searched":userpc_searched})
 
+def userspc(request):
+    return render(request, "smartipnav/userspc.html")
 def userspc_form(request):
-    
-    if request.method == "POST":
-        
-        form = UsersPcForm(request.POST)
-
-        if form.is_valid():
-            data = form.cleaned_data
-            
-            userspc = Userspc(name=data["nombre"], lastname=data["apellido"], pc_username=data["nombre_usuario_pc"], pc_name=data["nombre_pc"])
-
-            userspc.save()
-            
-    form = UsersPcForm()
-    return render(request, "smartipnav/userspc_form.html", {"form":form})
-
-#All USER´S PC LIST
+    return render(request, "smartipnav/userspc_form.html")
 def userspc_list(request):
-    pc_users = Userspc.objects.all()
-    return render(request, "smartipnav/userspc_list.html", {"pc_users":pc_users})
-
-
+    return render(request, "smartipnav/userspc_list.html")
 
 def office(request):
     return render(request, "smartipnav/office.html")
