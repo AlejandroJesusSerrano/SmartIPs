@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block content %}
+
 <section>
     <div class="container col-lg-6 bg-light rounded">
         <div class="card mx-auto mt-5 bg-dark style="width: 20rem;">
@@ -13,7 +14,10 @@
             </div>
             <form id=printer_add_form action="" method="post" class="mt-2">
                 {% csrf_token %}
-                <ul class="list-group list-group-flush">
+                
+                {{ form.as_p }} 
+                
+                <!-- <ul class="list-group list-group-flush">
                     <li class="list-group-item bg-dark">
                         <label class="form-control-label text-light" for="user_name">Nombre: </label>
                     <input class="form-control" type="text" name="user_name" id="user_name">
@@ -29,13 +33,13 @@
                     <li class="list-group-item bg-dark">
                         <label class="form-control-label text-light" for="pc_name">Nombre Pc: </label>
                         <input class="form-control" type="password" name="pc_name" id="pc_name">
-                    </li>
+                    </li>  -->
                     <li class="list-group-item bg-dark px-auto">
                         <button type="submit" class="btn btn-info row mx-auto w-100">Enviar</button>
                     </li>
-                  </ul>
+                  </ul> 
             </form>
         </div>
     </div>
-</section>
+</section> 
 {% endblock %}

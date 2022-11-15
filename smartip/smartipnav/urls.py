@@ -1,29 +1,30 @@
 from django.urls import path
-from smartipnav import views
+from smartipnav.views import *
 
 urlpatterns = [
-    path('index', views.index, name="Inicio"),
+    path('index', index, name="Inicio"),
     
-    path('printers', views.printers, name="Printers"),
-    path('printer_add', views.printer_form, name="AddPrinter"),
-    path('printers_show', views.printers_list, name="PrintersList"),
+    path('printers', printers, name="Printers"),
+    path('printer_add', printer_form, name="AddPrinter"),
+    path('printers_show', printers_list, name="PrintersList"),
     
-    path('computers', views.computer, name="Computers"),
-    path('computer_add', views.computer_form, name="AddComputer"),
-    path('computers_show', views.computers_list, name="ComputersList"),
+    path('computers', computer, name="Computers"),
+    path('computer_add', computer_form, name="AddComputer"),
+    path('computers_show', computers_list, name="ComputersList"),
     
-    path('ip', views.ip, name="Ip"),
-    path('ip_add', views.ip_form, name="AddIp"),
-    path('ips_show', views.ips_list, name="IpsList"),
+    path('ip', ip, name="Ip"),
+    path('ip_add', ip_form, name="AddIp"),
+    path('ips_show', ips_list, name="IpsList"),
     
-    path('userspc', views.userspc, name="UsersPc"),
-    path('userpc_add', views.userspc_form, name="AddUserPc"),
-    path('userspc_show', views.userspc_list, name="UserspcList"),
+    path('userpc', userpc, name="UserPc"),
+    path('userpc/userpc_result', userpc_result, name='UserPcResult'),
+    path('userpc_add', userspc_form, name="AddUserPc"),
+    path('userspc_show', userspc_list, name="UserspcList"),
     
-    path('offices', views.office, name="Offices"),
-    path('office_add', views.office_form, name="AddOffice"),
-    path('offices_show', views.offices_list, name="OfficesList"),
+    path('offices', office, name="Offices"),
+    path('office_add', office_form, name="AddOffice"),
+    path('offices_show', offices_list, name="OfficesList"),
     
-    path('user_add', views.user_form, name="AddUser"),
-    path('users_show', views.users_list, name="UsersList"),
+    path('user_add', user_form, name="AddUser"),
+    path('users_show', users_list, name="UsersList"),
 ]

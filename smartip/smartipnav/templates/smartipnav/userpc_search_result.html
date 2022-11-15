@@ -1,0 +1,51 @@
+{% extends 'smartipnav/base.html' %}
+
+{% block userspcactive %}
+    text-light
+{% endblock %}
+
+{% block content %}
+
+<section>
+    <div class="container col-lg-6 bg-light rounded">
+        <div class="card mx-auto mt-5 bg-dark style="width: 20rem;">
+            <div class="card-header bg-dark text-info mx-auto">
+                <p class="fs-2 my-0">Resultado de Busqueda</p>
+            </div>
+
+                <table class="table table-borderless">
+                    <tr>
+                        <th class="text-light">
+                            Nombre
+                        </th>
+                        <th class="text-light"> 
+                            Apellido 
+                        </th>
+                        <th class="text-light">
+                            Nombre Usuario Pc
+                        </th>
+                        <th class="text-light">
+                            Nombre Pc Asignada
+                        </th>
+                    </tr>
+                    {% for userpc in userpc_searched %}
+                    <tr>
+                        <td class="text-light">
+                            {{userpc.name}}
+                        </td>
+                        <td class="text-light">
+                            {{userpc.lastname}}
+                        </td>
+                        <td class="text-light">
+                            {{userpc.pc_username}}
+                        </td>
+                        <td class="text-light">
+                            {{userpc.pc_name}}
+                        </td>
+                    </tr>
+                    {% endfor %} 
+                </table>
+        </div>
+    </div>
+</section> 
+{% endblock %}
