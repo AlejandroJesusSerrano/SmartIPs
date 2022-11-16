@@ -1,15 +1,15 @@
 # SmartIPs
 
-###SMART IP V. 1.0.0
+### SMART IP V. 1.0.0
 
-######* Se requiere instalar libreria pillow. 
+###### * Se requiere instalar libreria pillow. 
   Ejecutar en la terminal: pip install pillow
 
-##Actualmente se Encuentran Funcionando los apartados:
+## Actualmente se Encuentran Funcionando los apartados:
 ====================================================
-###
-1.- IP's: en funciones de Busqueda por IP, Agregar IP, y Listar Todos los que se encuentren cargados
-2.- Oficinas: en funciones de Busqueda por oficina, Agregar oficina, y Listar Todos los que se encuentren cargados
+
+## 1.- IP's: en funciones de Busqueda por IP, Agregar IP, y Listar Todos los que se encuentren cargados
+## 2.- Oficinas: en funciones de Busqueda por oficina, Agregar oficina, y Listar Todos los que se encuentren cargados
 3.- Usuarios de PC: en funciones de Busqueda por Usuario de PC, Agregar Usuario de PC, y Listar Todos los que se encuentren cargados
 4.- Los formularios activos se generan dinàmicamente.
 ===================================================
