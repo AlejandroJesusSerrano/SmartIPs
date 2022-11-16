@@ -3,7 +3,7 @@
 ### SMART IP V. 1.0.0
 
 ###### * Se requiere instalar libreria pillow. 
-  Ejecutar en la terminal: pip install pillow
+###### Ejecutar en la terminal: pip install pillow
 
 ## Actualmente se Encuentran Funcionando los apartados:
 ====================================================
