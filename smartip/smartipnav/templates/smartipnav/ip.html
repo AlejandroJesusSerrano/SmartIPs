@@ -6,13 +6,25 @@
 
 {% block content %}
 
-<section id="intro" class="clearfix">
-    <div class="container d-flex h-100">
-        <div class="row justify-content-center align-self-center">
-            <div class="col-md-6 intro-info order-md-first order-last">
-                <h2 class="text-dark">ESTA ES LA PAGINA DE IP </h2>
+<section>
+    <div class="container col-lg-6 bg-light rounded">
+        <div class="card mx-auto mt-5 bg-dark style="width: 20rem;">
+            <div class="card-header bg-dark text-info mx-auto">
+                <p class="fs-2 my-0">Buscar Direccion IP</p>
             </div>
+            <form id=printer_add_form action="{% url 'IpResult' %}" method="get" class="mt-2">
+                {% csrf_token %}
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-dark">
+                        <label class="form-control-label text-light" for="ip_dir">Ingrese la Direccion de IP</label>
+                        <input class="form-control" type="text" name="ip_dir" id="ip_dir">
+                    </li>
+                    <li class="list-group-item bg-dark px-auto">
+                        <button type="submit" class="btn btn-info row mx-auto w-100">Buscar</button>
+                    </li>
+                </ul> 
+            </form>
         </div>
     </div>
-
+</section>
 {% endblock %}

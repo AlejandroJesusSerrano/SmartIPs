@@ -8,13 +8,17 @@ class User(models.Model):
         username = models.CharField(max_length=16),
         password = models.CharField(max_length=16),
 
-class Ip(models.Model):
-        ipdir = models.CharField(max_length=13)
 
 class Office(models.Model):
         officename = models.CharField(max_length=30)
         floor = models.CharField(max_length=3)
+        judge = models.CharField(max_length=30)
         location = models.CharField(max_length=60)
+
+class Ip(models.Model):
+        ipdir = models.CharField(max_length=13)
+        device = models.CharField(max_length=11)
+        internet = models.BooleanField(default=False)
 
 class Userspc(models.Model):
         name = models.CharField(max_length=30)
@@ -31,7 +35,6 @@ class Computer(models.Model):
         internet_access = models.BooleanField(default=False)
         ip = models.ForeignKey(Ip, on_delete=models.CASCADE)
         reg_user = models.ForeignKey(Userspc, on_delete=models.CASCADE)
-        Office = models.ForeignKey(Office, on_delete=models.CASCADE)
 
 class Printer(models.Model):
         image = models.ImageField()
@@ -39,4 +42,3 @@ class Printer(models.Model):
         brand = models.CharField(max_length=15)
         rebuilded = models.BooleanField(default=False)
         ip = models.ForeignKey(Ip, on_delete=models.CASCADE)
-        Office = models.ForeignKey(Office, on_delete=models.CASCADE)

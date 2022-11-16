@@ -13,6 +13,7 @@ urlpatterns = [
     path('computers_show', computers_list, name="ComputersList"),
     
     path('ip', ip, name="Ip"),
+    path('ip/ipsearch', ip_search_result, name="IpResult"),
     path('ip_add', ip_form, name="AddIp"),
     path('ips_show', ips_list, name="IpsList"),
     
@@ -22,6 +23,7 @@ urlpatterns = [
     path('userspc_show', userspc_list, name="UserspcList"),
     
     path('offices', office, name="Offices"),
+    path('offices/search_result', office_search_result, name="OfficeResult"),
     path('office_add', office_form, name="AddOffice"),
     path('offices_show', offices_list, name="OfficesList"),
     

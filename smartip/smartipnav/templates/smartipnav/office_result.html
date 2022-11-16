@@ -10,7 +10,7 @@
     <div class="container col-lg-6 bg-light rounded">
         <div class="card mx-auto mt-5 bg-dark style="width: 20rem;">
             <div class="card-header bg-dark text-info mx-auto">
-                <p class="fs-2 my-0">Oficinas</p>
+                <p class="fs-2 my-0">Resultado de Busqueda</p>
             </div>
 
                 <table class="table table-borderless">
@@ -28,7 +28,7 @@
                             Edificio
                         </th>
                     </tr>
-                    {% for office in offices_list %}
+                    {% for office in offices_searched %}
                     <tr>
                         <td class="text-light">
                             {{office.officename}}
